@@ -1,0 +1,38 @@
+---
+title: "census"
+author: "Ty levit"
+format: html
+execute: 
+  echo: false
+  message: false 
+  warning: false
+---
+
+```{r}
+#|label: setup
+
+library(tidyverse)
+library(tidycensus)
+```
+
+```{r}
+#|ccache: true
+library(tidycensus)
+
+FL_income <- get_acs(
+  geography = "tract", 
+  variables = "B19013_001",
+  state = "FL", 
+  year = 2020,
+  geometry = TRUE
+)
+
+FL_income
+```
+
+
+
+```{r}
+plot(FL_income["estimate"])
+```
+
