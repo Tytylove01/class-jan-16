@@ -4,5 +4,7 @@
 .Ruserdata
 
 *rproj
-analysis_files
+analysis_*
+rsconnect/
+
 

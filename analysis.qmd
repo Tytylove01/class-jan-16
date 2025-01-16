@@ -9,14 +9,14 @@ execute:
 ---
 
 ```{r}
-#|label: setup
+#| label: setup
 
 library(tidyverse)
 library(tidycensus)
 ```
 
 ```{r}
-#|ccache: true
+#| cache: true
 library(tidycensus)
 
 FL_income <- get_acs(
@@ -27,7 +27,7 @@ FL_income <- get_acs(
   geometry = TRUE
 )
 
-FL_income
+
 ```
 
 
